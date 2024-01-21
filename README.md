@@ -10,3 +10,5 @@ DevOps is a collaborative approach that emphasizes communication, integration, a
 
 ## Projects
 - Linux Project
+- Basic Git Project
+
