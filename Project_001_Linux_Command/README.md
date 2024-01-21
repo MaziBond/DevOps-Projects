@@ -7,18 +7,18 @@ hese Linux commands empower users to efficiently navigate, manage, and manipulat
 ```Bash
 Example: sudo apt upgrade
 ```
-Here, sudo is used to upgrade the package list (apt upgrade) with elevated privileges, ensuring that the system's package information is current.
+
 ![sudo command screenshot](<images/linux_project_sudo apt Upgrade command.png>)
 
+Here, sudo is used to upgrade the package list (apt upgrade) with elevated privileges, ensuring that the system's package information is current.
 
 ## 2. pwd (Print Working Directory) command
 **pwd** prints the full path of the current working directory. It's fundamental for navigating the file system and understanding your current location.
 ```Bash
 Example: pwd [option]
 ```
-When you run pwd, it outputs the complete path from the root directory to your current working directory, helping you orient yourself within the file system.
 ![pwd command screenshot](<images/linux_project_pwd command.png>)
-
+When you run pwd, it outputs the complete path from the root directory to your current working directory, helping you orient yourself within the file system.
 
 ## 3. cd (Change Directory) command
 **cd** is used to change the current working directory. It's essential for navigating through different folders.
@@ -32,9 +32,10 @@ In this example, cd is employed to move into the "Documents" directory. You can 
 ```Bash
 Example: ls -l
 ```
-The -l option provides a detailed listing, including file permissions, ownership, size, and modification date. This extra information aids in understanding the characteristics of listed files.
+
 ![ls command screenshot](images/linux_project_ls_command.png)
 
+The -l option provides a detailed listing, including file permissions, ownership, size, and modification date. This extra information aids in understanding the characteristics of listed files.
 
 ## 5. cat (Concatenate) command
 **cat** is versatile; it concatenates and displays the content of files. It's commonly used to read the contents of text files.
@@ -59,17 +60,18 @@ Here, cp duplicates "sourcefile" to the specified "destination" path. It's cruci
 ```Bash
 Example: mv sourcefile destination
 ```
-In this case, mv is used to move "sourcefile" to the specified "destination" path. It effectively relocates files within the file system.
-
 ![mv command screenshot](<images/linux_project_mv command.png>)
+
+In this case, mv is used to move "sourcefile" to the specified "destination" path. It effectively relocates files within the file system.
 
 ## 8. 'mkdir' (Make Directory) command
 **mkdir** creates a new directory. It's essential for organizing files and projects.
 ```Bash
 Example: mkdir new_directory
 ```
-Running mkdir with a directory name as an argument creates a new directory with that name. This is useful for structuring your file system.
 ![mkdir command screenshot](<images/linux_project_mkdir command.png>)
+
+Running mkdir with a directory name as an argument creates a new directory with that name. This is useful for structuring your file system.
 
 ## 9. rmdir (Remove Directory) command
 
@@ -77,7 +79,7 @@ Running mkdir with a directory name as an argument creates a new directory with 
 ```Bash
 Example: rmdir empty_directory
 ```
-Elaboration: If "empty_directory" is indeed empty, running rmdir removes it. For non-empty directories, rm -r is typically used.
+If "empty_directory" is indeed empty, running rmdir removes it. For non-empty directories, rm -r is typically used.
 
 ## 10. rm (Remove) command
 
@@ -130,7 +132,7 @@ The -h option makes the sizes human-readable (in KB, MB, GB). df provides a quic
 
 **du** shows the disk usage of files and directories. It's helpful for identifying space-consuming items.
 ```Bash
-Example: du -h
+Example: du -h /home/ebukachima/Downloads/
 ```
 The -h option makes the sizes human-readable. du can be used to analyze the disk space usage of specific directories.
 ![du command screenshot](images/linux_project_du_command.png)
@@ -138,7 +140,7 @@ The -h option makes the sizes human-readable. du can be used to analyze the disk
 ## 17. 'head' command
 **head** displays the first few lines of a file. It's useful for quickly inspecting the beginning of a file.
 ```Bash
-Example: head -n 10 file.txt
+Example: head DevOps
 ```
 The -n option specifies the number of lines to display. In this example, the first 10 lines of "file.txt" are shown.
 ![head command screenshot](images/linux_project_head_command.png)
@@ -147,7 +149,7 @@ The -n option specifies the number of lines to display. In this example, the fir
 ## 18. 'tail' command
 tail displays the last few lines of a file. It's handy for monitoring log files or checking the end of a file.
 ```Bash
-Example: tail -n 5 file.txt
+Example: tail DevOps
 ```
 Similar to head, the -n option specifies the number of lines to display. Here, the last 5 lines of "file.txt" are shown.
 
