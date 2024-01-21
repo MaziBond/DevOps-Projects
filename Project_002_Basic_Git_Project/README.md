@@ -11,6 +11,7 @@ The first step is to initialize a Git repository in your project folder. Open yo
 ```Bash
 git init
 ```
+![git init screenshot](images/git_project_git_init.png)
 This command sets up a new Git repository, creating a hidden .git folder to store the configuration and version history.
 
 ### 2. Adding and Committing Files:
@@ -18,8 +19,13 @@ After initializing the repository, start by adding your project files to Git's t
 
 ```Bash
 git add .
+```
+![git add screenshot](images/git_project_git_add.png)
+
+```Bash
 git commit -m "Initial commit"
 ```
+![git commit screenshot](images/git_project_git_commit.png)
 The git add . command stages all changes, and git commit -m "Initial commit" commits the changes with a descriptive message.
 
 ## Working with branches
@@ -36,6 +42,11 @@ Alternatively, combine branch creation and switching into one step with the -b o
 ```Bash
 git checkout -b new_feature
 ```
+or
+```Bash
+git switch -c new-feature
+```
+![git switch screenshot](images/git_project_git_switch.png)
 This creates a new branch named "new_feature" and switches to it, providing an isolated workspace for your changes.
 
 ### 2. Listing Local Branches:
@@ -44,6 +55,7 @@ To see a list of branches on your local machine, use:
 ```Bash
 git branch
 ```
+![git branch screenshot](images/git_project_git_branch.png)
 This command will display all local branches, and the currently active branch will be highlighted with an asterisk (*).
 
 ### 3. Making Changes and Committing:
@@ -52,8 +64,15 @@ With changes isolated in a branch, you can now make modifications to your code. 
 
 ```Bash
 git add .
+```
+![git add screenshot](images/git_project_git_add.png)
+
+This stages all the changes in the branch.
+```Bash
 git commit -m "Implement new feature"
 ```
+![git commit screenshot](images/git_project_git_commit.png)
+
 These changes are confined to the current branch, preventing interference with other ongoing development efforts.
 
 ### 4. changing into old branch
@@ -61,6 +80,7 @@ These changes are confined to the current branch, preventing interference with o
 ```Bash
 git checkout main
 ```
+![git checkout screenshot](images/git_project_git_checkout.png)
 ### 5. Merging Branches:
 
 Integration of changes from a feature branch back into the main branch is a critical step. Switch to the target branch and use the git merge command:
@@ -81,5 +101,26 @@ git branch -d new_feature
 For branches pushed to a remote repository, use:
 
 # Collaboration and Remote Repository
+
+## Link the Local Repository to the GitHub Repository:
+### 1. Adding Remote Repository
+- Copy the Remote Repository URL:
+If you don't have the URL of the remote repository, you can usually find it on the GitHub or GitLab website. It will look something like:
+```bash
+HTTPS: https://github.com/username/repository.git
+```
+![git link screen shot](images/git_project_git_link.png)
+- Navigate to Your Local Repository:
+Open a terminal or command prompt and navigate to your local Git repository using the cd command:
+
+```Bash
+cd /Documents/repository
+```
+- Add the Remote Repository:
+Use the git remote add command to add a remote repository. Replace origin with the name you want to give to the remote (it's a common convention to use "origin") and replace the URL with the actual URL of your remote repository:
+
+```Bash
+git remote add origin https://github.com/username/repository.git
+```
 
 
