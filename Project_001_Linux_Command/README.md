@@ -1,4 +1,5 @@
-hese Linux commands empower users to efficiently navigate, manage, and manipulate files and directories. Understanding their functionality and various options is key to becoming proficient in working with the Linux command line.
+# Linux Command Project
+These Linux commands empower users to efficiently navigate, manage, and manipulate files and directories. Understanding their functionality and various options is key to becoming proficient in working with the Linux command line.
 
 # File Manipulation
 
