@@ -1,6 +1,6 @@
 # Introduction:
 
-Welcome to the world of version control with Git! Whether you're a solo developer working on a personal project or part of a team collaborating on a larger endeavor, Git provides a robust and flexible platform to manage and track changes in your codebase. This guide will walk you through the essential steps of setting up your first Git project and introduce fundamental concepts that will empower you to work efficiently and collaborate seamlessly.
+This basic Git project represents a starting point for my journey into Git.This is a walkthrough on the essential steps of setting up a Git project and introduction of fundamental concepts that will enable a DevOPs engineer to work efficiently and collaborate seamlessly.
 
 ## Key Steps in Creating a Basic Git Project:
 
@@ -29,7 +29,7 @@ git commit -m "Initial commit"
 The git add . command stages all changes, and git commit -m "Initial commit" commits the changes with a descriptive message.
 
 ## Working with branches
-Understanding how to create, manage, and merge branches is fundamental to efficient and organized development. In this guide, we'll delve into the essential concepts of working with branches in Git and explore how they contribute to a more flexible and collaborative coding environment.
+Understanding how to create, manage, and merge branches is fundamental to efficient and organized development. This guide, will delve into the essential concepts of working with branches in Git and explore how they contribute to a more flexible and collaborative coding environment.
 
 ### 1. Creating a New Branch:
 
@@ -101,6 +101,7 @@ git branch -d new_feature
 For branches pushed to a remote repository, use:
 
 # Collaboration and Remote Repository
+This guide presupposes that a Git hub account has been setup already.
 
 ## Link the Local Repository to the GitHub Repository:
 ### 1. Adding Remote Repository
@@ -116,11 +117,13 @@ Open a terminal or command prompt and navigate to your local Git repository usin
 ```Bash
 cd /Documents/repository
 ```
+![change directory screenshot](images/git_project_cd_repository.png)
 - Add the Remote Repository:
 Use the git remote add command to add a remote repository. Replace origin with the name you want to give to the remote (it's a common convention to use "origin") and replace the URL with the actual URL of your remote repository:
 
 ```Bash
 git remote add origin https://github.com/username/repository.git
 ```
+![remote repo screenshot](images/git_project_git_remote_add.png)
 
 
