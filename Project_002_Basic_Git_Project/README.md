@@ -126,4 +126,42 @@ git remote add origin https://github.com/username/repository.git
 ```
 ![remote repo screenshot](images/git_project_git_remote_add.png)
 
+### 2. Cloning a Repository:
+
+The primary purpose of Git Clone is to create a local copy of a remote repository. To clone a repository, use the following command:
+
+```Bash
+git clone repository_url
+```
+![git clone screenshot](images/git_project_git_clone.png)
+Replace repository_url with the actual URL of the repository you want to clone. This command fetches the entire history and contents of the repository to your local machine.
+
+### 3. Updating Cloned Repositories:
+
+Once you've cloned a repository, you can fetch the latest changes from the remote repository using:
+
+```Bash
+git pull origin branch_name
+```
+![git pull screenshot](images/git_project_git_pull.png)
+This command updates your local repository with any new commits made in the remote repository.
+
+### 4. Pushing to Remote Repository: Sharing Your Contributions
+
+The git push command enables you to share your local changes with the wider development community.
+Before pushing, commit your changes using the following commands:
+
+```Bash
+git add .
+git commit -m "Your commit message"
+```
+These commands stage and commit your changes, preparing them for upload to the remote repository.
+To push your committed changes to the remote repository, use:
+
+```Bash
+git push origin branch_name
+```
+![git push screenshot](images/git_project_git_push.png)
+Replace branch_name with the name of the branch you want to push. This command uploads your local commits to the specified branch on the remote repository.
+
 
