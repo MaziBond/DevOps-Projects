@@ -18,3 +18,32 @@
 
 ![connect to instance screenshot](images/lamp_connect_to_instance.png)
 
+## install Apache2
+```Bash
+sudo upgrade && sudo update
+```
+```Bash
+sudo apt install apache2 
+```
+![apache2 installation screenshot](images/lamp_Apache2_installation.png)
+
+### - check apache status
+
+```Bash
+sudo systemctl status apache
+```
+![apache status screenshot](images/Lamp_Apache_status.png)
+
+### - Check Apache server connection to public server
+
+```Bash
+curl http://localhost:80
+```
+
+```Bash
+http://<AWS public ip address>
+```
+![Apache working screenshot](images/lamp_Apache_network_working.png)
+
+## Installation of MySQL
+
