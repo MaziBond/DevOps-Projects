@@ -205,3 +205,115 @@ http://<Public-DNS-Name>:80
 
 ## Testing the PHP with Nginx
 
+- To test the PHP with the server, run the following command to open the PHP file:
+```Bash
+vim /var/www/projectLEMP/index.php
+
+```
+
+- paste the following PHP script;
+
+```
+<?php
+phpinfo();
+```
+when you refresh the puublic IP address it will display the PHP information page like the page below.
+![PHP defauult page screenshot](<images/webstack_php defalt page.png>)
+
+
+After checking the relevant information about the PHP server through the page,  it is recommended that the file be removed as it contains sensitive information.
+
+- Run the following command to remove file:
+
+```Bash
+sudo rm /var/www/your_domain/info.php
+```
+
+- ## Retrieving Data from MySQL database with PHP
+
+In this step we will create a test database with a simple "To-do list"  and configure access to it, so that the Nginx website would be able to query data from the DB.
+
+- Connect the MySQL console using the root account:
+This command allows you to enter the root users password in other to edit the server
+```Bash
+sudo mysql -u root -p
+```
+- create a new user ``` example_user``` and assign the password ```PassWord.1``` (use your prefered strong password) with this commmand:
+
+```Bash
+CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+```
+
+- Grant the newly created user the permission to the database with this command:
+
+```Bash
+GRANT ALL ON example_database.* TO 'example_user'@'%';
+
+```
+- exit the database
+![mysql screenshot](images/webstack_mysql_cnfig.png)
+
+- you can test the configuration with the command :
+This code gives the root user access 
+```Bash
+sudo mysql -u example_user -p
+```
+The ```-u``` flag identifies the user while the ```-p``` flag prompts the user to enter the password.
+
+- After logging into the Mysql database enter the following query:
+
+```Bash
+CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));
+
+```
+This creates a testtable named todo_list.
+
+- Enter the fllowing command to insert rows of content.
+
+```Bash
+INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+```
+- enter the following query to confirm that it is applied:
+
+```Bash
+SELECT * FROM example_database.todo_list;
+```
+![Todo list screenshot](images/webstack_Mysql_todolist.png)
+
+- Now create a PHP script that will connect to the Mysql DB and query for your content. Enter the following command to create the new PHP file in the custom root directory.
+
+```Bash
+vi /var/www/projectLEMP/todo_list.php
+
+```
+- add the following script:
+
+```Bash
+<?php
+$user = "example_user";
+$password = "PassWord.1";
+$database = "example_database";
+$table = "todo_list";
+
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+```
+
+save and close the file.
+
+- check whether the configuration is working by visiting the public IP address/todo_list.php as written below:
+
+```Bash
+http://<Public_domain_or_IP>/todo_list.php
+```
+![todo list screen shot](images/webstack_todolist_website.png)
