@@ -11,4 +11,8 @@ DevOps is a collaborative approach that emphasizes communication, integration, a
 ## Projects
 - Linux Project
 - Basic Git Project
+- LAMP Stack implementation
+- LEMP Stack implementation
+- Shell Scripting Project
+- Client Server Architecture with MySQL DMBS
 
